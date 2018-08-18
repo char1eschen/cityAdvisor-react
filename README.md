@@ -1,1 +1,1 @@
-# dianping-react
+# journeyAdvisor-react
