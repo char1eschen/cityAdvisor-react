@@ -5,6 +5,7 @@ import { hashHistory } from 'react-router'
 import configureStore from './store/configureStore'
 
 import './static/css/common.less'
+import './static/css/font.css'
 
 const store = configureStore()
 
