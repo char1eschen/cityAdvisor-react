@@ -22,15 +22,15 @@ module.exports = {
       title: 'Country Road',
       subTitle: 'Mid-Year Discounting',
       price: '99',
-      distance: '160',
+      distance: '160m',
       mumber: '106'
     },
     {
       img: 'https://s8.postimg.cc/ysb089udd/138012-20161016201700186-1351787273.png',
-      title: 'David Henry Photography',
+      title: 'David Photography',
       subTitle: 'Professional Photograph',
       price: '599',
-      distance: '160',
+      distance: '160m',
       mumber: '58'
     },
     {
@@ -38,7 +38,7 @@ module.exports = {
       title: 'Chinese Hot Spicy Dip',
       subTitle: 'Outstanding Service, Delicious Food',
       price: '29',
-      distance: '160',
+      distance: '160m',
       mumber: '1426'
     }
   ]
