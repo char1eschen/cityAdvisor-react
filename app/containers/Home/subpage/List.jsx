@@ -2,7 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { getListData } from '../../../fetch/home/home.js'
 import ListComponent from '../../../components/List'
-
+import LoadMore from '../../../components/LoadMore'
 import './style.less'
 
 class List extends React.Component{
@@ -11,20 +11,26 @@ class List extends React.Component{
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
     this.state = {
       data: [],
-      hasMore: false
+      hasMore: false,
+      isLoadingMore: false,
+      page: 1 // next page num
     }
   }
 
   render(){
     return(
       <div>
-        <h2 className="home-list-title">Guess You Like It</h2>
+        <h2 className="home-list-title">Guess You Like These</h2>
         {
           this.state.data.length
           ? <ListComponent data={this.state.data}/>
           : <div>Loading...</div>  
         }
-        
+        {
+          this.state.hasMore
+          ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}/> 
+          : ''
+        }
       </div>
     )
   }
@@ -39,6 +45,21 @@ class List extends React.Component{
     const result = getListData(cityName, 0)
     this.resultHandler(result)
   }
+  // load more
+  loadMoreData(){
+    this.setState({
+      isLoadingMore: true
+    })
+    const cityName = this.props.cityName
+    const page = this.state.page
+    const result = getListData(cityName, page)
+    this.resultHandler(result)
+    // page nmu +1
+    this.setState({
+      page: page + 1,
+      isLoadingMore: false
+    })
+  }
   // data processing
   resultHandler(result){
     result.then(res=>{
@@ -47,9 +68,9 @@ class List extends React.Component{
       const hasMore = json.hasMore
       const data = json.data
 
-      //save data
+      // save data
       this.setState({
-        data: data,
+        data: this.state.data.concat(data),
         hasMore: hasMore
       })
     })

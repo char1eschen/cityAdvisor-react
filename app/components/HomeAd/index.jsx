@@ -10,11 +10,11 @@ class HomeAd extends React.Component {
   }
   render() {
     return (
-      <div id="home-ad">
+      <div id="home-sale">
         <h2>Great Deal</h2>
-        <div className="ad-container clear-fix">
+        <div className="sale-container clear-fix">
           {this.props.data.map((item, index) => {
-            return <div key={index} className="ad-item float-left">
+            return <div key={index} className="sale-item float-left">
               <a href={item.link} target="_blank">
                 <img src={item.img} alt={item.title}/>
               </a>

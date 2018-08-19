@@ -25,7 +25,7 @@ class Category extends React.Component{
         <ReactSwipe swipeOptions={opt}>
           <div className="carousel-item">
             <ul className="clear-fix">
-              <li className="float-left jingdian">Attraction</li>
+              <li className="float-left attraction">Attraction</li>
               <li className="float-left ktv">KTV</li>
               <li className="float-left shopping">Shopping</li>
               <li className="float-left service">Service</li>
