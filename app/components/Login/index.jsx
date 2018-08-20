@@ -13,16 +13,15 @@ class LoginComponent extends React.Component{
   }
 
   render(){
-    // console.log(this.props.loginHandle)
     return(
       <div id="login-container">
         <div className="input-container phone-container">
           <i className="icon-tablet"></i>
           <input 
-              type="text" 
-              placeholder="username" 
-              onChange={this.changeHandle.bind(this)} 
-              value={this.state.username}
+            type="text" 
+            placeholder="username" 
+            onChange={this.changeHandle.bind(this)} 
+            value={this.state.username}
           />
         </div>
         <div className="input-container password-container">

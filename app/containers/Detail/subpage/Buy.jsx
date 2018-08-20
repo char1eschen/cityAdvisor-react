@@ -80,18 +80,18 @@ class Buy extends React.Component{
 }
 
 function mapStateToProps(state) {
-    return {
-        userinfo: state.userinfo,
-        store: state.store
-    }
+  return {
+    userinfo: state.userinfo,
+    store: state.store
+  }
 }
 
 function mapDispatchToProps(dispatch) {
-    return {
-        storeActions: bindActionCreators(storeActionsFromFiles, dispatch)
-    }
+  return {
+    storeActions: bindActionCreators(storeActionsFromFiles, dispatch)
+  }
 }
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Buy)
