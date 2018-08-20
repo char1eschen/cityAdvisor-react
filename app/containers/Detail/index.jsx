@@ -1,5 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import Header from '../../components/Header'
+import Info from './subpage/Info'
 
 class Detail extends React.Component{
   constructor(props, context){
@@ -10,9 +12,13 @@ class Detail extends React.Component{
   render(){
     // get id
     const id = this.props.params.id
-    
+
     return(
-      <h1>Detail</h1>
+      <div>
+        <Header title="Details"/>
+        <Info id={id}/>
+        detail
+      </div>
     )
   }
 }

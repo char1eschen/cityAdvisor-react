@@ -63,7 +63,32 @@ router.get('/api/search/:page/:city/:category', function*(next) {
 
   this.body = searchListData
 })
+// detail page- details
+const detailInfo = require('./detail/info.js')
+router.get('/api/detail/info/:id', function*(next) {
+  console.log('detail page - details')
 
+  const params = this.params
+  const id = params.id
+
+  console.log('id: ' + id)
+
+  this.body = detailInfo
+})
+// detail page - commit
+const detailComment = require('./detail/comment.js')
+router.get('/api/detail/comment/:page/:id', function*(next) {
+  console.log('detail page - commit')
+
+  const params = this.params
+  const page = params.page
+  const id = params.id
+
+  console.log('id: ' + id)
+  console.log('page num: ' + page)
+
+  this.body = detailComment
+})
 
 // start server and router
 app.use(router.routes())
