@@ -1,4 +1,4 @@
-# cityAdvisor-react
+# cityAdvisor
 
 ![](https://github.com/char1eschen/cityAdvisor-react/blob/master/img/project-showcase-cityadvisor.png)
 
