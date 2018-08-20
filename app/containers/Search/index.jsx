@@ -1,5 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import SearchHeader from '../../components/SearchHeader'
+import SearchList from './subpage/List'
 
 class Search extends React.Component{
   constructor(props, context){
@@ -8,8 +10,12 @@ class Search extends React.Component{
   }
 
   render(){
+    const params = this.props.params
     return(
-      <h1>Search</h1>
+      <div>
+        <SearchHeader keyword={params.keyword}/>
+        <SearchList keyword={params.keyword} category={params.category}/>
+      </div>
     )
   }
 }
