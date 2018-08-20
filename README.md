@@ -10,7 +10,7 @@ react + react-router + redux + less + ES6/7 + webpack + fetch + mock
 ```
  git clone https://github.com/char1eschen/cityAdvisor-react.git
 
- cd react-dianping
+ cd cityAdvisor-react
 
  npm install
  
