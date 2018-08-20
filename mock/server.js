@@ -75,10 +75,10 @@ router.get('/api/detail/info/:id', function*(next) {
 
   this.body = detailInfo
 })
-// detail page - commit
+// detail page - comment
 const detailComment = require('./detail/comment.js')
 router.get('/api/detail/comment/:page/:id', function*(next) {
-  console.log('detail page - commit')
+  console.log('detail page - comment')
 
   const params = this.params
   const page = params.page
