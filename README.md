@@ -1,4 +1,7 @@
 # cityAdvisor-react
+
+![](https://github.com/char1eschen/cityAdvisor-react/blob/master/img/project-showcase-cityadvisor.png)
+
 cityAdvisor is a mobile web app created by React.
 
 ### Technology Stack
