@@ -90,6 +90,28 @@ router.get('/api/detail/comment/:page/:id', function*(next) {
   this.body = detailComment
 })
 
+// orderlist
+const orderList = require('./orderlist/orderList.js')
+router.get('/api/orderlist/:username', function*(next) {
+  console.log('Order List')
+
+  const params = this.params
+  const username = params.username
+  console.log('username:' + username)
+
+  this.body = orderList
+})
+
+// submit comment
+router.post('/api/submitComment', function*(next) {
+  console.log('submit comment')
+
+  this.body = {
+    errno: 0,
+    msg: 'ok'
+  }
+})
+
 // start server and router
 app.use(router.routes())
   .use(router.allowedMethods());

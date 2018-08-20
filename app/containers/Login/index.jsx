@@ -53,6 +53,7 @@ class Login extends React.Component{
     const userinfo = this.props.userinfo
     if(userinfo.username){
       // has login
+      this.goUserPage()
     }
     else{
       //has not login
