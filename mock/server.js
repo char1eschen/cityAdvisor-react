@@ -28,7 +28,41 @@ router.get('/api/homelist/:city/:page', function*(next) {
 
   this.body = homeListData
 });
+// Search page - result - three params
+var searchListData = require('./search/list.js')
+router.get('/api/search/:page/:city/:category/:keyword', function*(next) {
+  console.log('search page - result')
 
+  // params
+  const params = this.params
+  const paramsPage = params.page
+  const paramsCity = params.city
+  const paramsCategory = params.category
+  const paramsKeyword = params.keyword
+
+  console.log('page num：' + paramsPage)
+  console.log('city：' + paramsCity)
+  console.log('category：' + paramsCategory)
+  console.log('keyword：' + paramsKeyword)
+
+  this.body = searchListData
+})
+// search page - result - two params
+router.get('/api/search/:page/:city/:category', function*(next) {
+  console.log('search page - result')
+
+  // params
+  const params = this.params
+  const paramsPage = params.page
+  const paramsCity = params.city
+  const paramsCategory = params.category
+
+  console.log('page num:' + paramsPage)
+  console.log('city:' + paramsCity)
+  console.log('category:' + paramsCategory)
+
+  this.body = searchListData
+})
 
 
 // start server and router

@@ -13,6 +13,7 @@ class ListItem extends React.Component {
     const data = this.props.data
     return (
       <div className="list-item clear-fix">
+        <Link to={'/detail/' + data.id}>
           <div className="item-img-container float-left">
             <img src={data.img} alt={data.title}/>
           </div>
@@ -29,6 +30,7 @@ class ListItem extends React.Component {
               <span className="mumber float-right">Has Sold: {data.mumber}</span>
             </div>
           </div>
+        </Link>
       </div>
     )
   }

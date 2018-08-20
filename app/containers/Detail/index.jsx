@@ -8,6 +8,9 @@ class Detail extends React.Component{
   }
 
   render(){
+    // get id
+    const id = this.props.params.id
+    
     return(
       <h1>Detail</h1>
     )

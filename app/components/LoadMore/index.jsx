@@ -14,12 +14,12 @@ class LoadMore extends React.Component {
         {
           this.props.isLoadingMore
           ? <span>Load...</span>
-          : <span onClick={this.loadMoreHandler.bind(this)}>Load More</span>
+          : <span onClick={this.loadMoreHandle.bind(this)}>Load More</span>
         }
       </div>
     )
   }
-  loadMoreHandler(){
+  loadMoreHandle(){
     this.props.loadMoreFn()
   }
   componentDidMount(){

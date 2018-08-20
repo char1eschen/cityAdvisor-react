@@ -17,19 +17,19 @@ class CityList extends React.Component {
               <span onClick={this.clickHandle.bind(this, 'Sydney')}>Sydney</span>
             </li>
             <li>
-              <span onClick={this.clickHandle.bind(this, 'Canberra')}>Canberra</span>
+              <span onClick={this.clickHandle.bind(this, 'Rome')}>Rome</span>
             </li>
             <li>
-              <span onClick={this.clickHandle.bind(this, 'Melbourne')}>Melbourne</span>
+              <span onClick={this.clickHandle.bind(this, 'Paris')}>Paris</span>
             </li>
             <li>
-              <span onClick={this.clickHandle.bind(this, 'Brisbane')}>Brisbane</span>
+              <span onClick={this.clickHandle.bind(this, 'Berlin')}>Berlin</span>
             </li>
             <li>
               <span onClick={this.clickHandle.bind(this, 'Perth')}>Perth</span>
             </li>
             <li>
-              <span onClick={this.clickHandle.bind(this, 'Adelaide')}>Adelaide</span>
+              <span onClick={this.clickHandle.bind(this, 'Dublin')}>Dublin</span>
             </li>
           </ul>
         </div>
