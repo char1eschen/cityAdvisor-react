@@ -20,7 +20,7 @@ class OrderList extends React.Component{
         <h2>Orders</h2>
         {
           this.state.data.length
-          ? <OrderListComponent data={this.state.data} />
+          ? <OrderListComponent data={this.state.data} submitComment={this.submitComment.bind(this)}/>
           : ''
         }
       </div>
@@ -43,6 +43,17 @@ class OrderList extends React.Component{
     }).catch(ex => {
       if (__DEV__) {
         console.error('orderlist error ', ex.message)
+      }
+    })
+  }
+  submitComment(id, value, callback){
+    const result = postComment(id, value)
+    result.then(res=>{
+      return res.json()
+    }).then(json=>{
+      if(json.errno === 0){
+        //already comment
+        callback()
       }
     })
   }
