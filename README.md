@@ -23,5 +23,5 @@ react + react-router + redux + less + ES6/7 + webpack + fetch + mock
 
  Visit http://localhost:8080
 
- npm run dist (Production MOde)
+ npm run dist (Production Mode)
 ```
